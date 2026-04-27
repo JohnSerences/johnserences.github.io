@@ -1,0 +1,110 @@
+---
+- name: "Javier Garcia"
+  role: "Former Postdoc"
+  bio: "Javi is now a neuroscientist at the US CCDC Army Research Laboratory"
+  image: "/assets/images/alumni/javier-garcia.jpg"
+
+- name: "Rosie Cowell"
+  role: "Former Postdoc"
+  bio: "Rosie is now an Associate Professor of Psychology at U Colorado Boulder"
+  image: "/assets/images/alumni/rosie-cowell.jpg"
+
+- name: "Edward Ester"
+  role: "Former Postdoc"
+  bio: "Eddie is now an Assistant Professor at U. Nevada, Reno"
+  image: "/assets/images/alumni/edward-ester.jpg"
+
+- name: "Rosanne Rademaker"
+  role: "Former Postdoc"
+  bio: "Rosanne is now an Assistant Professor at the Max Planck in Frankfurt"
+  image: "/assets/images/alumni/rosanne-rademaker.jpg"
+
+- name: "Kirsten Adam"
+  role: "Former Postdoc"
+  bio: "Kirsten is now an Assistant Professor at Rice University"
+  image: "/assets/images/alumni/kirsten-adam.jpg"
+
+- name: "Miranda Scolari (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Miranda is now an Assistant Professor at Texas Tech"
+  image: "/assets/images/alumni/miranda-scolari.jpg"
+
+- name: "Tiffany Ho (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Tiffany is now an Assistant Professor of Psychology at UCLA"
+  image: "/assets/images/alumni/tiffany-ho.jpg"
+
+- name: "Sameer Saproo (Psychology)"
+  role: "Former Graduate Student"
+  bio: ""
+  image: "/assets/images/alumni/sameer-saproo.jpg"
+
+- name: "Anna Byers (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Anna is now a UX Manager at ServiceNow"
+  image: "/assets/images/alumni/anna-byers.jpg"
+
+- name: "Tommy Sprague (Neuroscience)"
+  role: "Former Graduate Student"
+  bio: "Tommy is now an assistant professor at UC Santa Barbara"
+  image: "/assets/images/alumni/tommy-sprague.jpg"
+
+- name: "Mary Smith (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Experience researcher at Adobe"
+  image: "/assets/images/alumni/mary-smith.jpg"
+
+- name: "Sirawaj Itthipuripat (Neuroscience)"
+  role: "Former Graduate Student"
+  bio: "Sirawaj is now at King's Mongkut University of Technology Thonburi in Thailand"
+  image: "/assets/images/alumni/sirawaj-itthipuripat.jpg"
+
+- name: "Stephanie Nelli (Neuroscience)"
+  role: "Former Graduate Student"
+  bio: "Steph is now an assistant professor at Occidental College"
+  image: "/assets/images/alumni/stephanie-nelli.jpg"
+
+- name: "Vy Vo (Neuroscience)"
+  role: "Former Graduate Student"
+  bio: "Vy is currently a researcher at Intel. Here is Vy's CV ."
+  image: "/assets/images/alumni/vy-vo.jpg"
+
+- name: "Chaipat Chunharas (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Chaipat is now a neurologist in the department of medicine at King Chulalongkorn Memorial Hospital in Thailand"
+  image: "/assets/images/alumni/chaipat-chunharas.jpg"
+
+- name: "Nuttida Rungratsameetaweemana (Neuroscience)"
+  role: "Former Graduate Student"
+  bio: "Nuttida is now an assistant professor at Columbia University"
+  image: "/assets/images/alumni/nuttida-rungratsameetaweemana.jpg"
+
+- name: "Maggie Henderson (Neuroscience)"
+  role: "Former Graduate Student"
+  bio: "Maggie is now an Assistant Professor at CMU"
+  image: "/assets/images/alumni/maggie-henderson.jpg"
+
+- name: "Anna Shafer Skelton (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Anna is now a postdoc with Russell Epstein at U. Penn."
+  image: "/assets/images/alumni/anna-shafer-skelton.jpg"
+
+- name: "Angus Chapman (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Angus is now a postdoc with Rachel Denison at Boston University"
+  image: "/assets/images/alumni/angus-chapman.jpg"
+
+- name: "Tim Sheehan (Neuroscience)"
+  role: "Former Graduate Student"
+  bio: "Tim is now working in industry in Data Science and ML"
+  image: "/assets/images/alumni/tim-sheehan.jpg"
+
+- name: "Sunyoung Park (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Sunyoung is now a postdoc at Rutgers with Noelle Stiles"
+  image: "/assets/images/alumni/sunyoung-park.jpg"
+
+- name: "Janna Wennberg (Psychology)"
+  role: "Former Graduate Student"
+  bio: "Janna is now a postdoc in CogSci at UCSD with Anastasia Kiyonaga"
+  image: "/assets/images/alumni/janna-wennberg.jpg"

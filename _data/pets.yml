@@ -1,0 +1,25 @@
+---
+- name: "Ricky"
+  image: "/assets/images/people/ricky.jpg"
+  blurb: "...Relatedly, the authors failed to cite literature on the benefits of string cheese in canine diets (see Ricky, 2020; Ricky 2021a, Ricky 2021b, Ricky 2022, Ricky 2023, Ricky, 2024), an oversight I find problematic and that limits the rigor of this manuscript."
+  quote: "Don't tell me what to do John, there was a non-zero probability that the thing I just ate was an organic compound containing valuable calories. How else could I know for sure?"
+
+- name: "Muha and Dali"
+  image: "/assets/images/people/muha-and-dali.jpg"
+  blurb: "Muha (left): Overall, this manuscript was SO, SO interesting! I think my co-reviewer Dali would be ESPECIALLY interested in the claim that orange cats need more affection than other cats. But overall, I have very few comments, SUPER COOL!\n\nDali (right): Whatever the reviewer Muha recommends? Do THE OPPOSITE."
+  quote: "Co-review complete."
+
+- name: "Iris"
+  image: "/assets/images/people/iris.jpg"
+  blurb: "My main point of consideration is on the authors' use of figures. Currently, readers cannot sniff or roll around in the figures. Scratch and sniff figures would be useful, particularly given the broad readership of the journal."
+  quote: "Please improve figure interactivity."
+
+- name: "Celeste"
+  image: "/assets/images/people/celeste.jpg"
+  blurb: "I fear I must decline this review request, as I have very little bandwidth. My schedule is packed with early morning naps, late morning naps, afternoon naps, early evening playtime with bespoke toys, late evenings of staring menacingly out the window, and middle of the night naps."
+  quote: "Unavailable due to scheduling conflicts."
+
+- name: "Diego"
+  image: "/assets/images/people/diego.jpg"
+  blurb: "While this manuscript is well-written and covers an interesting topic, it contains several critical flaws and needs substantial revision, as well as additional experiments. Of course, I am also open to accepting the manuscript as-is for boiled chicken..."
+  quote: "Major revisions (or chicken)."

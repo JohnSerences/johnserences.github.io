@@ -1,0 +1,19 @@
+---
+layout: default
+title:  "News"
+permalink: /news/
+post_list: false
+---
+
+- Holly's other new preprint out on [biorxiv](https://www.biorxiv.org/content/10.1101/2025.10.20.683560v1) showing that interactions between visual memories and new sensory inputs scale with memory strength and behavioral relevance.
+- Super fun writing with (and learning from) Anastasia Kiyonaga. New review paper about the flexible use of early sensory areas to support working memory [[Trends in Cognitive Sciences](https://drive.google.com/file/d/1riSZgcg9uPTocVv3MgjhjAVcxsjWzNP3/view?usp=drive_link)].
+- Holly's new preprint is out on [arxiv](https://arxiv.org/abs/2509.23104). She uses continuous time RNNs to argue that exploiting biases in training data is a key element of efficient coding, and that top-down feedback evolves during training so that models can take advantage of biases but can still handle unexpected inputs.
+- Sunyoung uses a spiking neural network model to show that near random connections between 'control' regions (e.g., PFC) and visual cortex can simultaneously prevent spurious feedback while supporting spatially global feature-based attentional modulations [[PLoS Computational Biology](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013396)][[pdf](https://drive.google.com/file/d/1abO9sFQuBKqyb20xxcNiEJnRiAWQOg1N/view?usp=drive_link)].
+- Maggie and Nuttida show that dynamic modulations in early visual cortex play a role in complex shape categorization tasks [[Nature Communications](https://www.nature.com/articles/s41467-025-58707-4)] [[pdf](https://drive.google.com/file/d/1YGcD2sEa3g3oaJSHYWfZo3dZiVrzdf2D/view?usp=drive_link)].
+- Janna's paper suggests that more perceptual similarity during encoding leads to more interference, but retaining perceptual information in WM incurs little cost (consistent with predictions from modelling work) [[Attention, Perception and Psychophysics](https://link.springer.com/article/10.3758/s13414-024-02933-3?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20240812&utm_content=10.3758%2Fs13414-024-02933-3)][[pdf](https://drive.google.com/file/d/14L9dSbv7cNpkwZr1BS9qe5QEjR8zmgPZ/view?usp=sharing)].
+- Sirawaj has a new paper on the relationship between attention, visual appearance and response bias [[Journal of Neuroscience](https://www.jneurosci.org/content/early/2023/08/18/JNEUROSCI.2192-22.2023)][[pdf](https://drive.google.com/file/d/1bnWBHOtTjpv7lq2ycQEiME10WyGgUDFL/view?usp=drive_link)].
+- Sawetsuttipan et al. (from Sirawaj's group in Thailand) systematically examine interactions between task difficulty and attentional modulations of visually evoked response [[Journal of Neuroscience](https://www.jneurosci.org/content/43/18/3312.long)][[pdf](https://drive.google.com/file/d/14EhmqugfiXjlLlCp_ViFW3HBBS7q6vSy/view?usp=drive_link)].
+- Tim's paper on serial dependence effects in visual cortex accepted at PLoS Biology - attractive biases in behavior despite repulsive adaptation in visual cortex [[journal website (open)](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001711), [osf data and code](https://osf.io/e5xw8/?view_only=e7c1da85aa684cc8830aec8d74afdcb4)]. Accompanying primer by David Whitney, Mauro Manassi and Yuki Murai [[here](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001788)].
+- Maggie and Rosanne's paper on the strategic reconfiguration of working memory representations from sensory to motor-like codes accepted at eLife [[journal website (open)](https://elifesciences.org/articles/75688), [OSF data & code](https://osf.io/te5g2/)].
+
+For the complete publication list, see the [Publications](/pubs/) page.

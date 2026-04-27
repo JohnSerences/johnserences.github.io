@@ -1,0 +1,15 @@
+{% for alum in site.data.alumni %}
+<div class="team__member">
+    <div class="team__image">
+        <img src="{{ alum.image | relative_url }}" alt="{{ alum.name }}">
+    </div>
+    <div class="team__content">
+        <h2>{{ alum.name }}</h2>
+        <p>{{ alum.role }}</p>
+        {% if alum.bio %}
+        <p>{{ alum.bio }}</p>
+        {% endif %}
+    </div>
+</div>
+<div class="divider"></div>
+{% endfor %}

@@ -1,0 +1,150 @@
+<script>
+	window.addEventListener("DOMContentLoaded", () => {
+		const canvas = document.getElementById("raster");
+		if (!canvas) return;
+
+		const ctx = canvas.getContext("2d");
+		const W = canvas.width;
+		const H = canvas.height;
+		const N_UNITS = 8;
+		const SCALE = 1.5;
+
+		const xCurveL = 130 * SCALE;
+		const xCurveR = 225 * SCALE;
+		const xOutput = 310 * SCALE;
+		const radius = 5 * SCALE;
+		const xAxisY = H - (radius + 2);
+		const SIGMOID_X_RANGE = 12; // plot domain [-12, 12] for clear saturation tails
+		const SIGMOID_SLOPE = 0.37; // further flattened (~33% lower) for more dynamic range
+		const SATURATION_FRACTION = 0.15; // ~15% flat region on each side
+		const INPUT_SPEED_SCALE = 0.4; // 60% slower input-dot movement
+		const HISTORY_LEN = 40;
+		const DELAY_CURVE = 10;
+
+		const preState = Array.from({ length: N_UNITS }, () => (Math.random() * 2 - 1) * SIGMOID_X_RANGE * 0.35);
+		const preVelocity = Array.from({ length: N_UNITS }, () => 0);
+		const lineHistory = Array.from({ length: N_UNITS }, () => []);
+
+		function sigmoid(x) {
+			return 1 / (1 + Math.exp(-SIGMOID_SLOPE * x));
+		}
+
+		function jitter(scale) {
+			return (Math.random() - 0.5) * scale;
+		}
+
+		function effectiveXFromNormalized(xNorm) {
+			const sat = SATURATION_FRACTION;
+			if (xNorm <= sat) return -SIGMOID_X_RANGE;
+			if (xNorm >= 1 - sat) return SIGMOID_X_RANGE;
+			const local = (xNorm - sat) / (1 - (2 * sat));
+			return -SIGMOID_X_RANGE + local * (2 * SIGMOID_X_RANGE);
+		}
+
+		function drawSigmoidCurve() {
+			ctx.strokeStyle = "rgba(0,0,0,0.45)";
+			ctx.lineWidth = 2.08;
+			ctx.beginPath();
+			for (let px = xCurveL; px <= xCurveR; px++) {
+				const s = (px - xCurveL) / (xCurveR - xCurveL); // 0..1
+				const x = effectiveXFromNormalized(s);
+				const yNorm = sigmoid(x); // 0..1
+				const py = H - (10 + yNorm * (H - 20));
+				if (px === xCurveL) ctx.moveTo(px, py);
+				else ctx.lineTo(px, py);
+			}
+			ctx.stroke();
+
+		}
+
+		function draw() {
+			ctx.clearRect(0, 0, W, H);
+
+			drawSigmoidCurve();
+
+			const preValues = [];
+			const postValues = [];
+			for (let i = 0; i < N_UNITS; i++) {
+				// Random-walk dynamics with damping (stochastic, non-cyclical).
+				const drift = (Math.random() * 2 - 1) * 0.65 * INPUT_SPEED_SCALE;
+				preVelocity[i] = (preVelocity[i] * 0.86) + drift;
+				preState[i] += preVelocity[i] * INPUT_SPEED_SCALE;
+				if (preState[i] > SIGMOID_X_RANGE) {
+					preState[i] = SIGMOID_X_RANGE;
+					preVelocity[i] *= -0.45;
+				} else if (preState[i] < -SIGMOID_X_RANGE) {
+					preState[i] = -SIGMOID_X_RANGE;
+					preVelocity[i] *= -0.45;
+				}
+				const preActivation = preState[i];
+				const preNorm = (Math.max(-SIGMOID_X_RANGE, Math.min(SIGMOID_X_RANGE, preActivation)) + SIGMOID_X_RANGE) / (2 * SIGMOID_X_RANGE);
+				const effectiveX = effectiveXFromNormalized(preNorm);
+				const postActivation = sigmoid(effectiveX); // 0..1
+				preValues.push(preActivation);
+				postValues.push(postActivation);
+			}
+
+			let minPost = Infinity;
+			let maxPost = -Infinity;
+			for (let i = 0; i < postValues.length; i++) {
+				if (postValues[i] < minPost) minPost = postValues[i];
+				if (postValues[i] > maxPost) maxPost = postValues[i];
+			}
+			const postRange = Math.max(1e-6, maxPost - minPost);
+
+			for (let i = 0; i < N_UNITS; i++) {
+				const preActivation = preValues[i];
+				const postActivation = postValues[i];
+				const normalizedPost = (postActivation - minPost) / postRange;
+				const yOut = H - (10 + normalizedPost * (H - 20));
+				const hue = (i * 360) / N_UNITS;
+				const clampedX = Math.max(-SIGMOID_X_RANGE, Math.min(SIGMOID_X_RANGE, preActivation));
+				const xNorm = (clampedX + SIGMOID_X_RANGE) / (2 * SIGMOID_X_RANGE);
+				const xCurve = xCurveL + xNorm * (xCurveR - xCurveL);
+				const effectiveX = effectiveXFromNormalized(xNorm);
+				const yCurve = H - (10 + sigmoid(effectiveX) * (H - 20));
+				const pointNow = { xCurve, yCurve, yOut };
+
+				lineHistory[i].unshift(pointNow);
+				if (lineHistory[i].length > HISTORY_LEN) lineHistory[i].pop();
+				const h = lineHistory[i];
+				const pCurve = h[Math.min(DELAY_CURVE, h.length - 1)] || pointNow;
+
+				// Smooth curve with propagated lag from input toward output.
+				ctx.strokeStyle = `hsla(${hue}, 70%, 45%, 0.45)`;
+				ctx.lineWidth = 2.16;
+				const xEntry = xCurve;
+				const yBase = xAxisY + jitter(0.8);
+				const xCurveP = xCurve;
+				const yCurveP = yCurve;
+				const xEnd = xOutput;
+				const yEnd = yCurveP;
+
+				ctx.beginPath();
+				ctx.moveTo(xEntry, yBase);
+				// Straight rise from x-axis dot into the sigmoid point.
+				ctx.lineTo(xCurveP, yCurveP);
+				// Straight output branch to the right-side dot.
+				ctx.lineTo(xEnd, yEnd);
+				ctx.stroke();
+
+				// input unit: same hue as the line/output, brightness tracks pre-activation
+				const inTone = Math.max(0, Math.min(1, (preActivation + SIGMOID_X_RANGE) / (2 * SIGMOID_X_RANGE)));
+				ctx.fillStyle = `hsla(${hue}, 78%, ${25 + 45 * inTone}%, 0.95)`;
+				ctx.beginPath();
+				ctx.arc(xCurve, xAxisY, radius, 0, Math.PI * 2);
+				ctx.fill();
+
+				// output unit: activation level encoded by fill strength
+				ctx.fillStyle = `hsla(${hue}, 78%, ${28 + 42 * normalizedPost}%, 0.95)`;
+				ctx.beginPath();
+				ctx.arc(xEnd, yEnd, radius, 0, Math.PI * 2);
+				ctx.fill();
+			}
+
+			requestAnimationFrame(draw);
+		}
+
+		requestAnimationFrame(draw);
+	});
+</script>

@@ -1,0 +1,51 @@
+---
+- name: Luis D Ramirez
+  position: Postdoc
+  email: ''
+  bio: Luis is investigating the influence of sensory history on texture encoding and perception, employing a combination of psychophysics, fMRI, and computational approaches. He earned a BS in Science and Technology Studies while working with Drs. Rachel Denison and Marisa Carrasco on temporal attention research, Dr. Jonathan Bain on philosophy of physics research, and briefly with Dr. Frank Tong at Vanderbilt University on face perception and memory research. He earned his PhD from the Graduate Program for Neuroscience at Boston University with Dr. Sam Ling, where he investigated how attention and emotion influence the processing of fundamental visual features like spatial frequency, measured via fMRI-based models of population-level tuning. His postdoctoral work is supported by the NIH Blueprint D-SPAN K00 Award.
+  image: "/assets/images/people/luis-d-ramirez.jpg"
+- name: Holly Kular
+  position: Grad Student
+  email: ''
+  bio: Holly is a Ph.D. student in the Psychology Department. She earned her B.S. in Neuroscience at UCLA, where she worked in a concussion research lab led by Dr. Chris Giza. Next, she worked as a lab manager at the Stanford Vision and Perception Neuroscience Lab led by Dr. Kalanit Grill-Spector measuring how the brain and visual perception change across development. At UCSD, Holly is excited to continue exploring the visual system and its neural mechanisms, especially attention and perception. Outside of the lab, she enjoys all things outdoors including running, skiing, and nature photography.
+  image: "/assets/images/people/holly-kular.jpg"
+- name: Leah Ettensohn
+  position: Grad Student
+  email: ''
+  bio: Leah is a PhD candidate in the Psychology Department. She earned her B.S. in Cognitive Psychology from Carnegie Mellon University. Leah completed her undergraduate honors thesis in the lab of Dr. Marlene Behrmann, where she studied plasticity in the visual system. She then received a post-bac IRTA fellowship to study visuomotor perception at the NIH under Drs. Leslie Ungerleider and Chris Baker. At UCSD, Leah is currently studying multimodal working memory and attention. Leah enjoys pilates, being outdoors, and spending time with her cat.
+  image: "/assets/images/people/leah-ettensohn.jpg"
+- name: Yixin Yuan
+  position: Grad Student
+  email: ''
+  bio: Yixin / Stella is a third-year Neuroscience PhD student in the Serences and Aoi labs. She received a B.S. in Neuroscience at Carnegie Mellon University, where she completed an honors thesis on cell-type specific epigenetic markers of aging under the direction of Dr. Andreas Pfenning. She then received training at the Marcus Autism Center with Dr. Ami Klin, Dr. Warren Jones and Dr. Hasse Walum to parse heterogeneity within Autism Spectrum Disorder from longitudinal clinical assessments and eye-tracking data. At UCSD, Stella is interested in investigating how neural representations of visual experiences evolve over time, and how the brain can maintain stable interpretations of the world given these changes in neural activity.
+  image: "/assets/images/people/yixin-yuan.jpg"
+- name: Isabella Longoria-Valenzuela
+  position: Grad Student
+  email: ''
+  bio: Isabella is a first-year Psychology PhD student in the Brady and Serences labs. She earned her B.A. in Cognitive Neuroscience at Brown University, where she conducted computational visual perception research with Dr. Thomas Serre. She is interested in leveraging computational tools to investigate the intersection between visual perception, working memory, and long-term visual memory. When she is not in lab, Isabella enjoys eating french fries, doing yoga, and listening to podcasts.
+  image: "/assets/images/people/isabella-longoria-valenzuela.jpg"
+- name: Lena Kemmelmeier
+  position: Grad Student
+  email: ''
+  bio: Lena is a Psychology PhD student. She earned her B.S. in Neuroscience and Psychology from the University of Nevada, Reno, where she worked with Drs. Marian Berryhill and Sarah Haigh, studying sensory sensitivity and working memory in concussion and schizotypy using behavioral and EEG methods. At UCSD, she is excited to apply computational approaches to investigate visual attention and working memory. Outside the lab, Lena enjoys thrifting, playing the clarinet, traveling, and listening to podcasts.
+  image: "/assets/images/people/lena-kemmelmeier.jpg"
+- name: Chattarin Poungtubtim
+  position: Grad Student
+  email: ''
+  bio: Chattarin (Pun) is a PhD student in the Brady and Serences labs. He recently completed his M.D. from Chulalongkorn University, Thailand. During medical school years, he liked to sneak out and study biases in working memory with Dr. Chaipat Chunharas. He is interested in studying how humans use memory to imagine, think and plan by using a combination of psychophysical experiments, neuroimaging techniques and computational modeling. When he is not in the lab, you can find him walking on the street and taking some weird random photos.
+  image: "/assets/images/people/chattarin-poungtubtim.jpg"
+- name: Hannah Harris
+  position: Postbac
+  email: ''
+  bio: Hannah is a recent graduate from UC San Diego, where she earned a B.S. in Psychology and Cognitive Science. During her undergraduate studies, she worked with Dr. Dave Barner exploring how children learn language and acquire number knowledge. She hopes to continue investigating multimodal perception and deepen her interests through future graduate studies. Outside of the lab, she enjoys watching reality TV, wakesurfing, and playing the guitar.
+  image: "/assets/images/people/hannah-harris.jpg"
+- name: Anika Bhandari
+  position: Research Assistant
+  email: ''
+  bio: Anika is ongoing her second year as a Research Assistant at Serences Lab. She is a fourth year undergraduate studying Neurobiology at UCSD. Outside of lab and school, Anika enjoys painting, traveling, and photography.
+  image: "/assets/images/people/anika-bhandari.jpg"
+- name: Natalya Phillips
+  position: Research Assistant
+  email: ''
+  bio: Natalya is a fourth-year Neurobiology major at UC San Diego and a research assistant in the Serences Lab, supported by the STARTneuro program under NIH BP-ENDURE and the UC HSI DDI grants. Alongside her scientific work, she is a musician with over two decades of experience as a vocalist, songwriter, and multi-instrumentalist. When not immersed in science or sound, she enjoys vintage fashion, weight training, and quality time with her two cats.
+  image: "/assets/images/people/natalya-phillips.jpg"

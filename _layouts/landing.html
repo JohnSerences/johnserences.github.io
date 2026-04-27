@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="page__content">
+  <div class="postcontent">
+    <div id="pizzazz_container">
+      <canvas id="raster" width="525" height="120" aria-hidden="true"></canvas>
+    </div>
+    <p></p>
+    
+    {{ content }}
+  </div>
+</div>
+
+{% include mouse_follower.html %}
+
+{% include pizzazz.html %}

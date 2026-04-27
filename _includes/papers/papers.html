@@ -1,0 +1,63 @@
+{%- assign papers = site.data.papers -%}
+
+<div class="pub-table-container">
+<table class="pub-table">
+ <!-- <caption>
+   Notes: #Co-first or co-corresponding author; *Trainees; P - Pending
+  | sort: "year"
+  | reverse 
+ </caption> -->
+ <thead>
+   <tr>
+     <th>Year</th>
+     <th>Authors</th>
+     <th>Title</th>
+     <th>Publication</th>
+     <th>Links</th>
+   </tr>
+ </thead>
+ <tbody>
+    {%- for p in papers -%}
+    <tr>
+      <td>{{ p.year }}</td>
+      <td>{{ p.authors }}</td>
+      <td>{{ p.title }}</td>
+      <td>{{ p.venue }}</td>
+      <td>
+        <div class="pub-links">
+          {%- if p.pdf -%}
+            <div class="pub-links__item pub-links__item--pdf">
+              [<a href="{{ p.pdf }}" target="_blank" rel="noopener noreferrer">pdf</a>]
+            </div>
+          {%- endif -%}
+    
+          {%- if p.bib -%}
+            <div class="pub-links__item pub-links__item--bib">
+              [<a href="{{ p.bib }}" target="_blank" rel="noopener noreferrer">bib</a>]
+            </div>
+          {%- endif -%}
+    
+          {%- if p.doi -%}
+            <div class="pub-links__item pub-links__item--doi">
+              [<a href="{{ p.doi }}" target="_blank" rel="noopener noreferrer">doi</a>]
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- if p.news -%}
+        <div class="pub-news">
+          Press:
+          {%- for item in p.news -%}
+            <div class="pub-news__item">
+              [<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.label }}</a>]
+            </div>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+        
+      </td>
+    </tr>
+    {%- endfor -%}
+ </tbody>
+</table>
+</div>

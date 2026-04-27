@@ -1,0 +1,113 @@
+body, html
+  background: var(--bg)
+  -moz-osx-font-smoothing: grayscale
+  font-feature-settings: "liga" 1
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  margin: 0
+  padding: 0
+  font-size: 1.1rem
+  font-family: Roboto, -apple-system, sans-serif
+  color: var(--text)
+  font-weight: var(--normal)
+  // letter-spacing: -0.015rem
+
+*, body, html
+  box-sizing: border-box
+
+html
+  // always reserve space for the vertical scrollbar
+  overflow-y: scroll
+
+  // if the browser supports it, keep gutters stable on both edges
+  @supports (scrollbar-gutter: stable)
+    scrollbar-gutter: stable
+
+body
+  line-height: 1.2
+  text-align: justify
+
+
+::selection
+  background: var(--selection-bg)
+  color: var(--selection-text)
+
+button:focus
+  outline: 1px dotted
+  outline: 5px auto -webkit-focus-ring-color
+
+h1
+  font-size: 1.5rem
+  font-weight: var(--bold)
+  margin: 0rem 0 1.5rem
+  line-height: 1.25
+
+h2
+  font-size: 1.3rem
+  font-weight: var(--bold)
+  margin: 0rem 0 1.5rem
+  line-height: 1.25
+
+h3
+  font-size: 1.1rem
+  font-weight: var(--bold)
+  margin: 0rem 0 1rem
+  color: var(--text-light)
+  line-height: 1.25
+
+strong
+  font-weight: var(--bold)
+
+p
+  margin-bottom: 1.5rem
+
+p:last-of-type
+  margin-bottom: 0
+
+a
+  color: var(--text-light)
+  text-decoration: underline
+  text-decoration-color: var(--underline)
+  text-underline-offset: 2px
+  text-decoration-thickness: 1px
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible
+  outline: 3px solid var(--text)
+  outline-offset: 3px
+
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0)
+  white-space: nowrap
+  border: 0
+
+.skip-link
+  position: absolute
+  left: 0.75rem
+  top: -4rem
+  z-index: 10000
+  background: var(--text)
+  color: var(--bg)
+  padding: 0.6rem 0.8rem
+  border-radius: 0.25rem
+  text-decoration: none
+
+  &:focus
+    top: 0.75rem
+
+@media (prefers-reduced-motion: reduce)
+  *, *::before, *::after
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important
+    scroll-behavior: auto !important
+

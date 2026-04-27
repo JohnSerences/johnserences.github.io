@@ -1,0 +1,15 @@
+{% for pet in site.data.pets %}
+<div class="team__member">
+    <div class="team__image">
+        <img src="{{ pet.image | relative_url }}" alt="{{ pet.name }}">
+    </div>
+    <div class="team__content">
+        <h2>{{ pet.name }}</h2>
+        <p>{{ pet.blurb | newline_to_br }}</p>
+        {% if pet.quote %}
+        <p><em>Memorable quote:</em> "{{ pet.quote }}"</p>
+        {% endif %}
+    </div>
+</div>
+<div class="divider"></div>
+{% endfor %}
