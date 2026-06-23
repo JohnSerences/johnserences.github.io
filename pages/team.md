@@ -5,7 +5,7 @@ permalink: /team/
 post_list: false
 ---
 
-{% include team/nuttida.html %}
+{% include team/john.html %}
 
 <div class="divider"></div>
 
