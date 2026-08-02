@@ -28,6 +28,7 @@ permalink: /posts/:title/
 # Build settings
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 sass:
   sass_dir: _sass        # default
