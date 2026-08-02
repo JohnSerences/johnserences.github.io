@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: serenceslab at UCSD
+title: Serences Lab at UCSD
 email: jserences@ucsd.edu
 author: serenceslab
 description: We investigate how behavioral goals influence how you see and experience the world. 
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://serenceslab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://johnserences.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /posts/:title/
 # Build settings
 plugins:
@@ -33,22 +33,13 @@ sass:
   sass_dir: _sass        # default
   style: compressed      # or nested, expanded, compact
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Files and folders that should never end up in the published site.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - .bundle/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - CSS1_Winter2021/
