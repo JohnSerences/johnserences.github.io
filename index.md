@@ -18,6 +18,5 @@ Department of Psychology, McGill Hall
 9500 Gilman Dr  
 La Jolla, CA 92093-0109
 
-Email: [jserences@ucsd.edu](mailto:jserences@ucsd.edu)
 
 [Perception and Cognition Lab Wiki](https://sites.google.com/ucsd.edu/serenceswiki/) (UCSD login required)
