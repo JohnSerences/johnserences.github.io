@@ -3,18 +3,14 @@
 
     h1
         margin: 0
-    
-    .page__title
-    // margin-top: 1rem
-    // margin-bottom: 2.5rem
-    //   font-size: 1.2rem
-    //   letter-spacing: -0.035rem
-    //   font-weight: var(--bold)
-    //   line-height: 1.2
 
 .page__header--landing
     margin-bottom: 0.25rem
 
-    .page__title
-        transform: translateY(51px)
+    // Wide enough for the title and the graphic to sit side by side: drop the
+    // title into the empty left portion of the canvas below it. Narrower than
+    // this the two stack, where the offset would collide with the graphic.
+    @media (min-width: 993px)
+        .page__title
+            transform: translateY(51px)
 

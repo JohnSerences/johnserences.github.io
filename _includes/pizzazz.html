@@ -4,15 +4,28 @@
 		if (!canvas) return;
 
 		const ctx = canvas.getContext("2d");
-		const W = canvas.width;
-		const H = canvas.height;
 		const N_UNITS = 8;
-		const SCALE = 1.5;
+		const radius = 7.5;
 
-		const xCurveL = 130 * SCALE;
-		const xCurveR = 225 * SCALE;
-		const xOutput = 310 * SCALE;
-		const radius = 5 * SCALE;
+		// Drawing coordinates are these logical units at any screen size; CSS
+		// scales the result to fit, and layout() matches the backing store to
+		// the device pixel ratio so it stays sharp.
+		const W = 525;
+		const H = 120;
+
+		// Horizontal extent of the graphic, as fractions of W. Beside the page
+		// title it keeps the left portion clear of the text; stacked below the
+		// title on narrow screens it uses the whole box instead.
+		const GEOMETRY = {
+			beside: { curveL: 0.371, curveR: 0.643, output: 0.886 },
+			stacked: { curveL: 0.05, curveR: 0.525, output: 0.95 },
+		};
+		const stackedQuery = window.matchMedia("(max-width: 992px)");
+
+		let xCurveL;
+		let xCurveR;
+		let xOutput;
+
 		const xAxisY = H - (radius + 2);
 		const SIGMOID_X_RANGE = 12; // plot domain [-12, 12] for clear saturation tails
 		const SIGMOID_SLOPE = 0.37; // further flattened (~33% lower) for more dynamic range
@@ -24,6 +37,22 @@
 		const preState = Array.from({ length: N_UNITS }, () => (Math.random() * 2 - 1) * SIGMOID_X_RANGE * 0.35);
 		const preVelocity = Array.from({ length: N_UNITS }, () => 0);
 		const lineHistory = Array.from({ length: N_UNITS }, () => []);
+
+		function layout() {
+			const dpr = window.devicePixelRatio || 1;
+			canvas.width = Math.round(W * dpr);
+			canvas.height = Math.round(H * dpr);
+			ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+			const geometry = stackedQuery.matches ? GEOMETRY.stacked : GEOMETRY.beside;
+			xCurveL = W * geometry.curveL;
+			xCurveR = W * geometry.curveR;
+			xOutput = W * geometry.output;
+
+			// Trails hold absolute coordinates, so drop them rather than let
+			// them snap across a change in geometry.
+			for (const history of lineHistory) history.length = 0;
+		}
 
 		function sigmoid(x) {
 			return 1 / (1 + Math.exp(-SIGMOID_SLOPE * x));
@@ -145,6 +174,8 @@
 			requestAnimationFrame(draw);
 		}
 
+		layout();
+		window.addEventListener("resize", layout);
 		requestAnimationFrame(draw);
 	});
 </script>
