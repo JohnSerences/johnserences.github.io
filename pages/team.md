@@ -1,6 +1,7 @@
 ---
 layout: team
-title:  false
+title:  "Team"
+hide_title: true
 permalink: /team/
 post_list: false
 ---

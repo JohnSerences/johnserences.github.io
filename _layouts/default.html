@@ -13,7 +13,7 @@
         {% if page.hero %}
         <img src="{{ page.hero }}" alt="{{ page.title }}" class="page__hero">
         {% endif %}
-        {% if page.title %}
+        {% if page.title and page.hide_title != true %}
         <h1 class="page__title">{{ page.title }}</h1>
         {% endif %}
         {% if page.date %}
