@@ -16,7 +16,7 @@ Rademaker, R.L., Serences, J.T. (under review) Manipulating attentional priority
 
 ## 2026
 
-Wennberg, J., Serences, J.T. (in press) Similarity-driven compression during encoding supports biased but more precise working memory. Journal of Vision
+Wennberg, J., Serences, J.T. (2026) Similarity-driven compression during encoding supports biased but more precise working memory. Journal of Vision [[link](https://jov.arvojournals.org/article.aspx?articleid=2811702)]
 
 Shafer-Skelton, A., Brady, T.F., Serences, J.T. (in press) A 2D Gabor-wavelet baseline model out-performs a 3D surface model in scene-responsive cortex. PLoS Computational Biology [[link](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013888)]
 
@@ -24,7 +24,7 @@ Shafer-Skelton, A., Brady, T.F., Serences, J.T. (in press) A 2D Gabor-wavelet ba
 
 Kiyonaga, A., Serences, JT. (2025) Sensory reformatting for a working visual memory. Trends in Cognitive Sciences [[pdf](https://drive.google.com/file/d/1riSZgcg9uPTocVv3MgjhjAVcxsjWzNP3/view?usp=drive_link)]
 
-Park, S., Serences, JT. (2025) Near-random connections support top-down feature-based attentional modulations in early sensory cortex. PLoS Computational Biology [[pdf](https://drive.google.com/file/d/1abO9sFQuBKqyb20xxcNiEJnRiAWQOg1N/view?usp=drive_link)]
+Park, S., Serences, JT. (2025) Near-random connections support top-down feature-based attentional modulations in early sensory cortex. PLoS Computational Biology [[link](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013396)]
 
 Henderson, M, Serences, JT, Rungratsameetaweemana, N (2025) Dynamic categorization rules alter representations in human visual cortex. Nature Communications [[pdf](https://drive.google.com/file/d/1YGcD2sEa3g3oaJSHYWfZo3dZiVrzdf2D/view?usp=drive_link)]
 
