@@ -4,6 +4,3 @@ _site/
 .bundle/
 vendor/bundle/
 .DS_Store
-
-# Course material that lives in this folder but is not part of the website
-CSS1_Winter2021/

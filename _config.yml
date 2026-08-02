@@ -43,4 +43,3 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor/
-  - CSS1_Winter2021/
