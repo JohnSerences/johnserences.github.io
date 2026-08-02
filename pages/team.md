@@ -1,14 +1,14 @@
 ---
 layout: team
 title:  "Team"
-hide_title: true
+hide_title: false
 permalink: /team/
 post_list: false
 ---
 
 {% include team/john.html %}
 
-<div class="divider"></div>
+
 
 {% include team/members.html %}
 
