@@ -23,7 +23,7 @@ email: jserences@ucsd.edu
 author: serenceslab
 description: We investigate how behavioral goals influence how you see and experience the world. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://johnserences.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://serenceslab.ucsd.edu" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /posts/:title/
 # Build settings
 plugins:
